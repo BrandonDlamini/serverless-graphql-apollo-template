@@ -1,7 +1,7 @@
 # NOTE: update this with your service name
 service: serverless-graphql-apollo-template
 
-# Create an optimized package for our functions 
+# Create an optimized package for our functions
 package:
   individually: true
 
@@ -24,9 +24,16 @@ provider:
   #  SAMPLE_ENV_VAR: ${env:SAMPLE_ENV_VAR}
 
 functions:
-  hello:
-    handler: handler.hello
+  graphql:
+    handler: src/graphql.graphqlHandler
     events:
       - http:
-          path: hello
+          path: graphql
+          method: post
+          cors: true
+          integration: lambda-proxy
+      - http:
+          path: graphql
           method: get
+          cors: true
+          integration: lambda-proxy
