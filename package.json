@@ -17,5 +17,8 @@
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^5.3.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "apollo-server-lambda": "^3.4.0",
+    "graphql": "^15.6.1"
+  }
 }
