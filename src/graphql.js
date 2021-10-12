@@ -1,4 +1,4 @@
-const { ApolloServer, gql } = require("apollo-server-lambda");
+const { ApolloServer } = require("apollo-server-lambda");
 import { schema } from "./schema";
 import { resolvers } from "./resolvers";
 
