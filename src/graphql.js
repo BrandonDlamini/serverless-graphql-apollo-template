@@ -6,18 +6,6 @@ const server = new ApolloServer({
   typeDefs: schema,
   resolvers: resolvers,
   playground: true,
-  formatError: (error) => {
-    return error;
-  },
-  formatResponse: (response) => {
-    return response;
-  },
-  context: ({ event, context }) => ({
-    headers: event.headers,
-    functionName: context.functionName,
-    event,
-    context,
-  }),
   tracing: true,
   introspection: true,
 });
